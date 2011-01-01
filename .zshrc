@@ -1,7 +1,7 @@
 setopt promptsubst
 autoload -U promptinit
 promptinit
-prompt grb
+prompt mstum 
 
 autoload -U compinit
 compinit
