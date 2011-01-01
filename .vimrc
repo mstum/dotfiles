@@ -28,6 +28,9 @@ call Tabstyle_spaces()
 set ai " Automatically set the indent of a new line (local to buffer)
 set si " smartindent (local to buffer)
 
+" File Stuff ******************************************************************
+filetype plugin indent on
+" To show current filetype use: set filetype
 
 " Scrollbars ******************************************************************
 set sidescrolloff=2
