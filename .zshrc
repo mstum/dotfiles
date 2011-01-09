@@ -8,7 +8,7 @@ compinit
 
 # Add paths that should have been there by default
 export PATH=${PATH}:/usr/local/bin
-export PATH="/Users/michael/bin:$PATH"
+export PATH="/Users/Michael/bin:$PATH"
 #export PATH="$PATH:~/.gem/ruby/1.8/bin"
 
 # Unbreak broken, non-colored terminal
