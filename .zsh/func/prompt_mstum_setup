@@ -210,5 +210,6 @@ prompt_wunjo_scm_branch() {
 }
 
 prompt_grb_setup "$@"
+uptime
 
 # vim:set ft=zsh:
