@@ -1,4 +1,5 @@
 # grb prompt theme
+#
 # copied from wunjo prompt theme and modified
 # copied from Gary Bernhardt (grb) theme and modified
 
@@ -210,6 +211,5 @@ prompt_wunjo_scm_branch() {
 }
 
 prompt_grb_setup "$@"
-uptime
 
 # vim:set ft=zsh:
