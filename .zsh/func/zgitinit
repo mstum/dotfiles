@@ -38,9 +38,13 @@ zgit_info_update() {
 zgit_isgit() {
 	if [ -z "$zgit_info[dir]" ]; then
 		return 1
-	else
-		return 0
-	fi
+  else
+    if [ -f ".gitnoprompt" ]; then
+      return 1
+    else
+      return 0
+    fi
+  fi
 }
 
 zgit_inworktree() {
