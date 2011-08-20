@@ -7,17 +7,14 @@ autoload -U compinit
 compinit
 
 # Add paths that should have been there by default
-export PATH=${PATH}:/usr/local/bin
-export PATH="/Users/Michael/bin:$PATH"
-#export PATH="$PATH:~/.gem/ruby/1.8/bin"
-export PATH="$PATH:$HOME/local/node/bin:/opt/local/bin:/Users/Michael/depot_tools"
+export PATH="$PATH:/usr/local/bin:/opt/local/bin:/Users/Michael/bin:$HOME/local/node/bin"
 export NODE_PATH="$HOME/local/node:$HOME/local/node/lib/node_modules"
 
 # Unbreak broken, non-colored terminal
 export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+export LSCOLORS="ExGxBxDxCxEgEdxbxgExEx"
 export GREP_OPTIONS="--color"
 
 # Unbreak history
@@ -25,15 +22,11 @@ export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
-# Unbreak Python's error-prone .pyc file generation
-export PYTHONDONTWRITEBYTECODE=1
-
 export WORDCHARS='*?[]~&;!$%^<>'
 
 # ACTUAL CUSTOMIZATION OH NOES!
 gd() { git diff $* | view -; }
 gdc() { gd --cached $*; }
-alias pygrep="grep --include='*.py' $*"
 alias rbgrep="grep --include='*.rb' $*"
 alias r=script/rails
 
