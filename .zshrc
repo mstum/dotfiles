@@ -10,6 +10,8 @@ compinit
 export PATH=${PATH}:/usr/local/bin
 export PATH="/Users/Michael/bin:$PATH"
 #export PATH="$PATH:~/.gem/ruby/1.8/bin"
+export PATH="$PATH:$HOME/local/node/bin:/opt/local/bin:/Users/Michael/depot_tools"
+export NODE_PATH="$HOME/local/node:$HOME/local/node/lib/node_modules"
 
 # Unbreak broken, non-colored terminal
 export TERM='xterm-color'
