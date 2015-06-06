@@ -63,3 +63,12 @@ function code {
       open -a "Visual Studio Code" --args "$F"
     fi
 }
+
+function movtogif {
+  if [[ $# = 0 ]]
+  then
+    echo "USAGE: movtogif filename.mov"
+  else
+    ffmpeg -i $1 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1:r.gif
+  fi
+}
