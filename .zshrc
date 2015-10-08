@@ -10,7 +10,6 @@ compinit
 export PATH=${PATH}:/usr/local/bin
 export PATH="/Users/Michael/bin:$PATH"
 export PATH="$PATH:$HOME/local/node/bin:$HOME/local/lynx/bin:/opt/local/bin:/usr/local/bin"
-export NODE_PATH="$HOME/local/node:$HOME/local/node/lib/node_modules"
 
 # Unbreak broken, non-colored terminal
 export TERM='xterm-color'
@@ -26,12 +25,6 @@ export SAVEHIST=$HISTSIZE
 
 export WORDCHARS='*?[]~&;!$%^<>'
 
-# ACTUAL CUSTOMIZATION OH NOES!
-gd() { git diff $* | view -; }
-gdc() { gd --cached $*; }
-alias rbgrep="grep --include='*.rb' $*"
-alias r=script/rails
-
 activate_virtualenv() {
     if [ -f env/bin/activate ]; then . env/bin/activate;
     elif [ -f ../env/bin/activate ]; then . ../env/bin/activate;
@@ -42,3 +35,12 @@ activate_virtualenv() {
 
 # Set up rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+function movtogif {
+  if [[ $# = 0 ]]
+  then
+    echo "USAGE: movtogif filename.mov"
+  else
+    ffmpeg -i $1 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1:r.gif
+  fi
+}
