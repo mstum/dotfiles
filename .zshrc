@@ -15,7 +15,7 @@ export NODE_PATH="$HOME/local/node:$HOME/local/node/lib/node_modules"
 # Unbreak broken, non-colored terminal
 export TERM='xterm-color'
 alias ls='ls -G'
-alias ll='ls -lG'
+alias ll='ls -laG'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgExEx"
 export GREP_OPTIONS="--color"
 
@@ -40,26 +40,5 @@ activate_virtualenv() {
     fi
 }
 
-# Originally from Jonathan Penn, with modifications by Gary Bernhardt
-function whodoneit() {
-    (set -e &&
-        for x in $(git grep -I --name-only $1); do
-            git blame -f -- $x | grep $1;
-        done
-    )
-}
-
 # Set up rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-# .net
-source dnvm.sh
-function code {
-    if [[ $# = 0 ]]
-    then
-      open -a "Visual Studio Code"
-    else
-      [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-      open -a "Visual Studio Code" --args "$F"
-    fi
-}
