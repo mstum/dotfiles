@@ -1,6 +1,6 @@
 Color	Normal	Bright
 Black	4E4E4E	7C7C7C
-Red	FF6C60	FFB6B0
+Red	    FF6C60	FFB6B0
 Green	A8FF60	CEFFAC
 Yellow	FFFFB6	FFFFCB
 Blue	96CBFE	B5DCFE
@@ -9,3 +9,17 @@ Cyan	C6C5FE	DFDFFE
 White	EEEEEE	FFFFFF
 
 Cursor	FFA560
+
+RGB
+Color	Normal	        Bright
+Black	78,78,78	    124,124,124
+Red	    255,108,96	    255,182,176
+Green	168,255,96	    206,255,172
+Yellow	255,255,182	    255,255,203
+Blue	150,203,254	    181,220,254
+Magenta	255,115,253	    255,156,254
+Cyan	198,197,254	    223,223,254
+White	238,238,238	    255,255,255
+
+Cursor	255,165,96
+
